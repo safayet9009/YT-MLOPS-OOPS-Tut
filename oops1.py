@@ -4,8 +4,8 @@ class employee:
     #special mehod/magic method/dunder method-constructor
     def __init__(self):
         self.id=123
-        self.salary=500000
-        self.designation='SWE'
+        self.salary=60000
+        self.designation='MLopsEngineer'
     def travel(self,destination):
         print("Employee is traveling to", destination)
 
