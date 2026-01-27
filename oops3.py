@@ -66,6 +66,9 @@ calc=calculator()
 print(calc.add(5,3)) 
 print(calc.mul(23,4))
 '''
+
+
+'''
 class person:
     def __init__(self,name,age):
         self.name=name
@@ -76,3 +79,32 @@ class person:
 p1=person("John", 30)
 
 print(p1.greet())
+'''
+'''
+class person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def celebrate_brtday(self):
+        self.age+=1
+        print (f"Happy birthday {self.name},u r now {self.age} years old")
+
+p1=person('safayet',25)
+
+p1.celebrate_brtday()
+p1.celebrate_brtday()
+'''
+
+
+
+class person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+p1=person("Shafayet", 25)
+
+print(p1)
