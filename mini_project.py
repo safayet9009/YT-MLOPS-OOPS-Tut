@@ -3,7 +3,14 @@ class chatbook:
         self.username=''
         self.password=''
         self.loggedin=False
-        self.menu()
+        self.__name='Defaul user'
+        #self.menu()
+
+    def get_name(self):
+        return self.__name
+    
+    def set_name(self,value):
+        self.__name=value
 
     def menu(self):
         user_input=input("""welcome to chatbook!! How would you like to process
@@ -15,6 +22,8 @@ class chatbook:
                          
                             """)
     
+    
+
 
         if user_input == '1':
             self.signup()
@@ -79,7 +88,7 @@ class chatbook:
         self.menu()
 
 
-user1=chatbook()
+#user1=chatbook()
 
 
     
