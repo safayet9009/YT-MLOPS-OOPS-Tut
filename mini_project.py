@@ -6,12 +6,14 @@ class chatbook:
         self.menu()
 
     def menu(self):
-        user_input=input("""welcome to chatbook!! How would you like to process\n'
+        user_input=input("""welcome to chatbook!! How would you like to process
                          1.press 1 to signup
                          2.press 2 to signin
                          3.press 3 to write a post
                          4.Press 4 to message a friend
-                         5.Press any other key to exit' """)
+                         5.Press any other key to exit' 
+                         
+                            """)
     
 
         if user_input == '1':
@@ -19,9 +21,9 @@ class chatbook:
         elif user_input == '2':
             self.signin()
         elif user_input == '3':
-            pass
+            self.my_post()
         elif user_input == '4':
-            pass
+            self.sendmasg()
         else:
             exit()
 
@@ -47,11 +49,34 @@ class chatbook:
             else:
                 print("please input correct credentials..")
 
-            print('\n')
+        print('\n')
 
-            self.menu()
+        self.menu()
 
 
+    def my_post(self):
+        if self.loggedin==True:
+            txt=input('Enter your message here')
+
+            print(f'following content has been posted-> {txt}')
+
+        else:
+            print('you need to signin first to post something..')
+        print('\n')
+        self.menu()
+
+    def sendmasg(self):
+        if self.loggedin==True:
+            txt=input('enter your message here ->')
+
+            frnd = input("Whom to send the msg? -> ")
+            print(f"Your message has been sent to {frnd}")
+        else:
+            print('you need to signin first to message someone..')
+
+        print('\n')
+
+        self.menu()
 
 
 user1=chatbook()
