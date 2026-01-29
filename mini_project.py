@@ -1,11 +1,28 @@
 class chatbook:
+
+    __user_id=1
+
     def __init__(self):
+        self.id = chatbook.__user_id
+        chatbook.__user_id += 1
+
         self.username=''
         self.password=''
         self.loggedin=False
-        self.__name='Defaul user'
+
+        self.__name='Default user' #(encapsulation)
         #self.menu()
 
+    @staticmethod
+    def get_id():
+        return chatbook.__user_id
+    
+    @staticmethod
+
+    def set_id(val):
+        chatbook.__user_id=val
+
+#encapsulation and setter getter method
     def get_name(self):
         return self.__name
     
