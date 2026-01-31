@@ -95,7 +95,7 @@ p1.celebrate_brtday()
 p1.celebrate_brtday()
 '''
 
-
+'''
 
 class person:
     def __init__(self,name,age):
@@ -108,3 +108,33 @@ class person:
 p1=person("Shafayet", 25)
 
 print(p1)
+
+'''
+
+
+#encapsulation
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.__age=age
+
+# p1=person('Emil',25)
+
+# print(p1.name)
+# #print(p1.__age)
+# print(p1._person__age)
+
+
+
+
+class person:
+    def __init__(self,name,age):
+        self.name=name
+        self.__age=age
+
+    def get_age(self):
+        return self.__age
+    
+p1=person('emil', 30)
+print(p1.get_age())
