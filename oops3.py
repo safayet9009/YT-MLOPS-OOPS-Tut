@@ -128,13 +128,95 @@ print(p1)
 
 
 
-class person:
-    def __init__(self,name,age):
-        self.name=name
-        self.__age=age
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.__age=age
 
-    def get_age(self):
-        return self.__age
+#     def get_age(self):
+#         return self.__age
     
-p1=person('emil', 30)
-print(p1.get_age())
+# p1=person('emil', 30)
+# print(p1.get_age())
+
+
+#setter method
+
+# class person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.__age=age
+
+#     def get_age(self):
+#         return self.__age
+    
+#     def set_age(self,age):
+#         if age>0:
+#             self.__age=age
+
+#         else:
+#             print('Age must be positive')
+
+# p1=person('Tobias', 25)
+
+# print(p1.get_age())
+
+# p1.set_age(30)
+# print(p1.get_age())
+
+
+#setter+getter+encapsulation
+
+# class student:
+#     def __init__(self, name):
+#         self.name=name
+#         self.__grade=0
+
+#     def set_grade(self,grade):
+#         if 0<= grade <=100:
+#             self.__grade=grade
+
+#         else:
+#             print('grade must be between 0 and 100')
+
+#     def get_grade(self):
+#         return self.__grade
+    
+#     def get_status(self):
+#         if self.__grade >=60:
+#             return 'passed'
+        
+#         else:
+#             return 'failed'
+        
+# student=student('Emil')
+
+# student.set_grade(85)
+
+# print(student.get_grade())
+# print(student.get_status())
+
+#private methods
+
+class calculator:
+    def __init__(self):
+        self.result=0
+
+    def __validate(self,num):
+        if not isinstance(num,(int,float)):
+            return False
+        return True
+    
+    def add(self,num):
+        if self.__validate(num):
+            self.result+=num
+
+        else:
+            print('invalid number')
+
+calc=calculator()
+calc.add(10)
+calc.add(5)
+print(calc.result)
+
+        
