@@ -198,25 +198,46 @@ print(p1)
 
 #private methods
 
-class calculator:
-    def __init__(self):
-        self.result=0
+# class calculator:
+#     def __init__(self):
+#         self.result=0
 
-    def __validate(self,num):
-        if not isinstance(num,(int,float)):
-            return False
-        return True
+#     def __validate(self,num):
+#         if not isinstance(num,(int,float)):
+#             return False
+#         return True
     
-    def add(self,num):
-        if self.__validate(num):
-            self.result+=num
+#     def add(self,num):
+#         if self.__validate(num):
+#             self.result+=num
 
-        else:
-            print('invalid number')
+#         else:
+#             print('invalid number')
 
-calc=calculator()
-calc.add(10)
-calc.add(5)
-print(calc.result)
+# calc=calculator()
+# calc.add(10)
+# calc.add(5)
+# print(calc.result)
 
+
+#static method
+
+# class mathhelper:
+#     @staticmethod
+#     def square(num):
+#         return num * num
+    
+
+# print(mathhelper.square(5))
+
+
+class user:
+    @staticmethod
+    def is_validate_age(age):
+        if isinstance(age,int) and age>=18:
+            return True
+        return False
+    
+print(user.is_validate_age(20))
+print(user.is_validate_age(15))
         
