@@ -231,13 +231,105 @@ print(p1)
 # print(mathhelper.square(5))
 
 
-class user:
-    @staticmethod
-    def is_validate_age(age):
-        if isinstance(age,int) and age>=18:
-            return True
-        return False
+# class user:
+#     @staticmethod
+#     def is_validate_age(age):
+#         if isinstance(age,int) and age>=18:
+#             return True
+#         return False
     
-print(user.is_validate_age(20))
-print(user.is_validate_age(15))
-        
+# print(user.is_validate_age(20))
+# print(user.is_validate_age(15))
+
+
+
+#inheritance
+
+#basic
+
+# class animal:
+#     def speak(self):
+#         print('animal makes a sound')
+
+# class dog(animal):
+#     def bark(self):
+#         print('dog barks')   
+
+# d=dog()
+
+# d.speak()
+# d.bark()
+
+    
+#Constructor Inheritance with super()
+
+
+# class person:
+#     def __init__(self,name):
+#         self.name=name
+
+# class student(person):
+#     def __init__(self,name,roll):
+#         super().__init__(name)
+#         self.roll=roll
+
+#     def show(self):
+#         print(f'name:{self.name},roll:{self.roll}')
+
+# s=student('emil',101)
+
+# s.show()
+
+
+#Method Overriding
+
+# class vehicle:
+#     def start(self):
+#         print('vehicle starting...')
+
+# class car(vehicle):
+#     def start(self):
+#         super().start()
+#         print('car starting...')
+       
+# c=car()
+# c.start()
+# # v=vehicle()
+# # v.start()
+
+
+#multilevel inheritance
+
+# class grandparent:
+#     def legacy(self):
+#         print('grandparent legacy')
+
+# class parent(grandparent):
+#     def parent_method(self):
+#         print('parent method')  
+
+# class child(parent):
+#     def child_method(self):
+#         print('child method')
+
+# c=child()
+# c.legacy()
+# c.parent_method()
+# c.child_method()  
+
+# Parent class
+# class Animal:
+#     def speak(self):
+#         print("Animal speaks")
+
+# # Child class
+# class Dog(Animal):
+#     def bark(self):
+#         print("Dog barks")
+
+# # Object create
+# d = Dog()
+
+# # Call parent method from child
+# d.speak()   # Parent class method
+# d.bark()    # Child class method
